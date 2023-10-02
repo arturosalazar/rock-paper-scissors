@@ -14,6 +14,7 @@ public class RockPaperScissors {
             while(true){
                 System.out.print("Select a move: r, p, s: ");
                 userSelection = scanner.nextLine();
+                userSelection = userSelection.toLowerCase();
                 if(userSelection.equals("r") || userSelection.equals("p") || userSelection.equals("s")){
                     break;
                 }
@@ -60,6 +61,7 @@ public class RockPaperScissors {
 
             System.out.println("Would you like to play again? y/n");
             String playAgain = scanner.nextLine();
+            playAgain = playAgain.toLowerCase();
             if (!(playAgain.equals("y") || playAgain.equals("yes"))){
                 System.out.println("Thank you for playing!");
                 break;
