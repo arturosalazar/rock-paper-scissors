@@ -11,13 +11,18 @@ public class RockPaperScissors {
         String userSelection;
         //Check that move is valid
         while(true){
-            System.out.println("Select a move: r, p, s");
+            System.out.print("Select a move: r, p, s: ");
             userSelection = scanner.nextLine();
             if(userSelection.equals("r") || userSelection.equals("p") || userSelection.equals("s")){
                 break;
             }
             System.out.println(userSelection + "is not a valid selection");
         }
+
+        //Print each player's move to make it clear what has happened
+        System.out.println("*************************");
+        System.out.println("Computer's Move: " + computerSelection);
+        System.out.println("Player's Move: " + userSelection);
 
         //Compare the moves to determine result and print result
         //Draw Condition
